@@ -13,4 +13,9 @@ router.route('/')
     res.status(200).json(jsonData);
 });
 router.route('/test')
-    .get((req, res) => res.render('index'));
+    .get((req, res) => {
+    const renderData = {
+        uri: process.env.SCRIPT_URI || 'localhost'
+    };
+    res.render('index', renderData);
+});

@@ -15,7 +15,14 @@ router.route('/')
     });
 
 router.route('/test')
-    .get((req, res) => res.render('index'));
+    .get((req, res) => {
+
+        const renderData: Object = {
+            uri: process.env.SCRIPT_URI || 'localhost'
+        };
+        res.render('index', renderData)
+
+    });
 
 
 export { router };
