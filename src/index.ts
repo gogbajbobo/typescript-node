@@ -4,9 +4,12 @@ import { Greeter, ConsoleLogText } from "./greeter"
 
 console.log(Greeter('test'));
 
-ConsoleLogText('tttttest!');
+ConsoleLogText('ttttest!');
 
 const app = express();
+
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 app.use(router);
 
