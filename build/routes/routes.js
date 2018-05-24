@@ -8,7 +8,8 @@ router.route('/')
     const jsonData = {
         error: false,
         message: 'OK!',
-        uri: process.env.SCRIPT_URI || 'localhost'
+        uri: process.env.SCRIPT_URI || 'localhost',
+        env: process.env
     };
     res.status(200).json(jsonData);
 });
