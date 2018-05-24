@@ -8,4 +8,3 @@ function ConsoleLogText(text) {
     return console.log(text);
 }
 exports.ConsoleLogText = ConsoleLogText;
-//# sourceMappingURL=greeter.js.map
