@@ -20,7 +20,9 @@ router.route('/test')
         const renderData: Object = {
             uri: process.env.SCRIPT_URI || 'localhost'
         };
-        res.render('index', renderData)
+        res.render('index', renderData, (err, content) => {
+            err ? res.json({err: err.message}) : res.send(content)
+        })
 
     });
 
